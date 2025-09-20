@@ -43,7 +43,8 @@ body {
 /* Main Container */
 main {
   width: 100%;
-  max-width: 350px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Card Styles */
@@ -52,7 +53,8 @@ main {
   border-radius: 15px;
   padding: 1.5rem;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.0955);
-  transition: transform 0.3s ease;
+  max-width: 350px;
+  width: 100%;
 }
 
 /* Card Image Container */
@@ -89,7 +91,8 @@ main {
   height: 48px;
 }
 
-.card-image:hover .image-overlay {
+.card-image:hover .image-overlay,
+.card-image:focus-within .image-overlay {
   opacity: 1;
 }
 
@@ -106,8 +109,10 @@ main {
   transition: color 0.3s ease;
 }
 
-.card-title:hover {
+.card-title:hover,
+.card-title:focus {
   color: var(--cyan-400);
+  outline: none;
 }
 
 /* Card Description */
@@ -182,8 +187,10 @@ main {
   transition: color 0.3s ease;
 }
 
-.creator-name:hover {
+.creator-name:hover,
+.creator-name:focus {
   color: var(--cyan-400);
+  outline: none;
 }
 
 /* Attribution */
